@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +23,16 @@ public class Q17_SpecialCharRemoveArray {
 
     public static void main(String[] args) {
         ArrayList<String> money = new ArrayList<>(Arrays.asList("$11", "$-45", "$2"));
-
+        System.out.println(getSum(money));
 
     }//main sonu
+
+    private static int getSum(ArrayList<String> money) {
+        int toplam = 0;
+        for (String avuc : money) {
+            toplam += Integer.parseInt(avuc.replace("$", ""));
+        }
+        if (toplam < 0) return -1;
+        else return toplam;
+    }
 }//Class sonu

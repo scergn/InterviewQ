@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,8 +15,19 @@ public class Q13_UniqeArray {
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 1, 4, 2, -2, 5, 6, 8, 7, 5, 6, -2, 9, 3, 10};
 
+    List<Integer> list = new ArrayList<>();
+    for (int i = 0; i< arr.length;i++){
+        if (!list.contains(arr[i])){
+            list.add(arr[i]);
+        }
+    }
+        System.out.println(list);
+    int[] unieqe = new int [list.size()];
+    for (int i=0;i<list.size();i++)    {
+        unieqe[i]=list.get(i);
 
-
+    }
+        System.out.println(Arrays.toString(unieqe));
     }
 }
 

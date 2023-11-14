@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.Scanner;
 
@@ -13,7 +13,12 @@ public class Q19_UsingDoWhilePrintNumber {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        System.out.println("Bir sayi giriniz");
+        int sayi= input.nextInt();
+        do {
+            System.out.print(sayi+" ");
+            sayi+=5;
+        }while (sayi<=100);
 
     }
 }

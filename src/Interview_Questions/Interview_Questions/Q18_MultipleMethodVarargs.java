@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 public class Q18_MultipleMethodVarargs {
     /* Task->
@@ -7,6 +7,17 @@ public class Q18_MultipleMethodVarargs {
  */
     public static void main(String[] args) {
 
-
+notHesapla("Zeynep",78,81,90,66,83);
+notHesapla("Ahmet",78,81,90,78);
+notHesapla("Leyla",78,81,90);
+notHesapla("Mehmet",78,81,90,66);
     }//main sonu
-}//Class sonu
+
+    private static void notHesapla(String name, double... notes) {
+        double toplam=0;
+        for (double w:notes ) {
+            toplam+=w;
+        }
+        System.out.println(name+"not ortalama: "+Math.round(toplam/notes.length));
+    }
+    }

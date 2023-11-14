@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,8 +14,31 @@ public class Q10_FibonacciListNumber {
 
         Scanner input = new Scanner(System.in);
         ArrayList<Integer> list = new ArrayList<>();
+        System.out.println("Bir sayi giriniz");
+        int sayi = input.nextInt();
+        if ( sayi <=0){
+            System.out.println("duzgun bir sayi girin");
+        } else if (sayi==1){
+            list.add(1);
+            System.out.println(list);
+        }else if (sayi ==2){
+            list.add(1);
+            list.add(1);
+            System.out.println(list);
+        }else {
+            int sayi1 =1;
+            int sayi2 =1;
+            int sayi3;
+            list.add(sayi1);
+            list.add(sayi2);
+            for (int i =3; i<=sayi; i++){
+                sayi3=sayi1+sayi2;
+                list.add(sayi3);
+                sayi1=sayi2;
+                sayi2=sayi3;
 
-
-
+            }
+        }
+        System.out.println(list);
     }
 }
