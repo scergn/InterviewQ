@@ -1,7 +1,8 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Q33_ListCollectionsMethodsTask {
@@ -23,7 +24,27 @@ public class Q33_ListCollectionsMethodsTask {
 
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            System.out.println((i + 1) + ". elemani giriniz");
+            list.add(scan.nextInt());
 
+
+        }
+        System.out.println("Ilk giriste " + list);
+        Collections.reverse(list);
+        System.out.println("Tersten siralanmis :" + list);
+        Collections.shuffle(list);
+        System.out.println("Karistirilmis: " + list);
+        Collections.rotate(list, 3);
+        System.out.println("3 birim saga kaydirilmis" + list);
+        int maxeleman = Collections.max(list);
+        int minElemeani = Collections.min(list);
+        System.out.println("maxeleman = " + maxeleman);
+        System.out.println("minElemeani = " + minElemeani);
+        Collections.replaceAll(list,maxeleman,minElemeani);
+        System.out.println("Max in min ile yer degistirlmis list: "+list);
 
 
     }

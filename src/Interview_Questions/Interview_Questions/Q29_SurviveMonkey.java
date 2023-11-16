@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 public class Q29_SurviveMonkey {
     /* Task->
@@ -15,7 +15,18 @@ public class Q29_SurviveMonkey {
         int numberOfBananas = 165, survivalDays = 1;
         boolean monkeyAlive = true;
         System.out.println("Maymun günde 4 muz yer  : ) ");
+    do {
+        numberOfBananas-=4;
+        System.out.println("Maymunun "+numberOfBananas+" adet muzu kaldi");
+        survivalDays++;
+        if (numberOfBananas<4){
+            monkeyAlive=false;
+            System.out.println("Bugun "+survivalDays+".gun maymum oldu");
 
+        }else {
+            System.out.println("Bugun "+survivalDays+".gun maymum hala hayatta");
+        }
+    }while (monkeyAlive);
 
     }
 }

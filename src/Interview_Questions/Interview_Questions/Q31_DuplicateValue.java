@@ -1,7 +1,8 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Q31_DuplicateValue {
@@ -16,8 +17,28 @@ public class Q31_DuplicateValue {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("Bir meting gitininz");
+        String metin = input.nextLine().replace(" ","");
+        List<Character> output=new ArrayList<>();
+        char [] arr=metin.toCharArray();
+        System.out.println(Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                if (arr[i]==arr[j]&&!output.contains(arr[j])){
+                    output.add(arr[j]);
+                }
+            }
 
+        }
+        System.out.println("List"+output);
+        String [] str=new String [output.size()];
+        for (int i = 0; i < output.size(); i++) {
+            str[i]=String.valueOf(output.get(i));
 
+        }
+        System.out.println("Array: "+Arrays.toString(str));
     }
+
+
 }
 

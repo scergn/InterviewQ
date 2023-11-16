@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.Scanner;
 
@@ -12,8 +12,10 @@ public class Q23_UsingDoWhileWithCondition {
     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-
+        System.out.println("Bir sayi girininz");
+        int sayi = input.nextInt();
+        if(sayi<100) System.out.println("Won");
+        else System.out.println("Lost");
 
     }
 }
