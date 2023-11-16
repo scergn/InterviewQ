@@ -1,8 +1,6 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Q38_SetTask {
 
@@ -27,8 +25,26 @@ public class Q38_SetTask {
         arrList.add(10);
         arrList.add(20);
         arrList.add(50);
+        Set<Integer> integerSet=new HashSet<>();
+        listiSeteAta(arrList,integerSet);
+        System.out.println("Listin elemanlarii aldiktan sonra set : "+integerSet);
 
+        //bolum 2
+        Set<Character> characterSet=new TreeSet<>();
+        karakterleriSetYap(characterSet,'A','B','a','R','q','r');
+        System.out.println("Char elemanlari aldiktan sonra set: "+characterSet);
+    }
 
+    private static void karakterleriSetYap(Set<Character> characterSet, Character... chars) {
+        for (int i = 0; i < chars.length; i++) {
+            characterSet.add(chars[i]);
+        }
+    }
+
+    private static void listiSeteAta(ArrayList<Integer> arrList, Set<Integer> integerSet) {
+        for (Integer w:arrList) {
+            integerSet.add(w);
+        }
     }
 }
 

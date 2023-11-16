@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 public class Q41_IFElse {
 		/* Task->
@@ -11,7 +11,15 @@ public class Q41_IFElse {
 		 */
 
     public static void main(String[] args) {
-
+        for (int i = 1; i <=30 ; i++) {
+            if (i%3==0&&i%5==0){
+                System.out.print("RockStar ");
+            } else if (i%3==0) {
+                System.out.print("Rock ");
+            } else if (i%5==0) {
+                System.out.print("Star ");
+            }else System.out.print(i+" ");
+        }
 
     }
 }

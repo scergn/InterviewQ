@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 public class Q44_PrintArray {
     //Task->
@@ -7,8 +7,12 @@ public class Q44_PrintArray {
 
     public static void main(String[] args) {
         String  arr[]={"sefil haluk","serap Lead","aytekin master","boos mustafa"};
+        printArrStr(arr);
+    }
 
-
-
+    private static void printArrStr(String[] arr) {
+        for (String w:arr) {
+            System.out.print(w+" ");
+        }
     }
 }

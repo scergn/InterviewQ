@@ -1,4 +1,4 @@
-package interviewQuestions;
+package Interview_Questions.Interview_Questions;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -26,9 +26,19 @@ public class Q36_AddedOrNotTask {
         numbers.add(4);
         numbers.add(5);
         numbers.add(3);
-
+        System.out.println("numbers = " + numbers);
         int tekrarliElemanSayisi = 0;
-
-
+        Set<Integer> uniqueElemanlar=new HashSet<>();
+        List<Integer> tekrarliList=new ArrayList<>();
+        for (int i = 0; i < numbers.size(); i++) {
+            boolean ekliMi=uniqueElemanlar.add(numbers.get(i));
+            if (!ekliMi){
+                tekrarliElemanSayisi++;
+                tekrarliList.add(numbers.get(i));
+            }
+        }
+        System.out.println("tekrarliElemanSayisi = " + tekrarliElemanSayisi);
+        System.out.println("tekrarliList = " + tekrarliList);
+        System.out.println("Set uniqueElemanlar = " + uniqueElemanlar);
     }
 }
